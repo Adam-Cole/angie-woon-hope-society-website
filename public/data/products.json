@@ -1,0 +1,62 @@
+[
+{
+"id": 1,
+"name": "Black Hope Bowling Hoodie",
+"category": "Apparel",
+"price": 50,
+"featured": 1,
+"image": "../images/products/1000075650.png",
+"imageAlt": "Black Angie Woon Hope Society hoodie",
+"description": "A warm pullover black bowling hoodie featuring the Angie Woon Hope Society logo.",
+"sizes": ["S", "M", "L", "XL", "2XL"],
+"available": true
+},
+{
+"id": 2,
+"name": "Black Hope Bowling T-Shirt",
+"category": "Apparel",
+"price": 25,
+"featured": 2,
+"image": "../images/products/1000075651.png",
+"imageAlt": "Black Angie Woon Hope Society T-shirt",
+"description": "A comfortable black bowling T-shirt featuring the Angie Woon Hope Society logo.",
+"sizes": ["S", "M", "L", "XL", "2XL"],
+"available": true
+},
+{
+"id": 3,
+"name": "Navy Hope Society T-Shirt",
+"category": "Apparel",
+"price": 25,
+"featured": 3,
+"image": "../images/products/1000089119.png",
+"imageAlt": "Navy Angie Woon Hope Society T-shirt",
+"description": "A classic navy T-shirt featuring the Angie Woon Hope Society logo.",
+"sizes": ["S", "M", "L", "XL", "2XL"],
+"available": true
+},
+{
+"id": 4,
+"name": "Hope Society Tote Bag",
+"category": "Accessories",
+"price": 25,
+"featured": 4,
+"image": "../images/products/1000089120.png",
+"imageAlt": "Purple Angie Woon Hope Society tote bag",
+"description": "A reusable tote bag for shopping, events, books, and everyday essentials.",
+"sizes": [],
+"available": true
+},
+{
+"id": 5,
+"name": "Navy Hope Hoodie",
+"category": "Apparel",
+"price": 50,
+"featured": 5,
+"image": "../images/products/1000089121.png",
+"imageAlt": "Navy Angie Woon Hope Society crewneck sweater",
+"description": "A comfortable pullover navy hoodie featuring the Angie Woon Hope Society logo.",
+"sizes": ["S", "M", "L", "XL", "2XL"],
+"available": true
+}
+]

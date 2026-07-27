@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Roger's memorial charity supporting leukemia patients and their families.">
+  <title>The Angie Woon Hope Society</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#" id="brandHome" aria-label="The Angie Woon Hope Society home">
+      <img src="../images/brand/image5.jpeg" alt="">
+      <span>
+        <strong>The Angie Woon Hope Society</strong>
+      </span>
+    </a>
+
+    <button class="menu-button" id="menuButton" type="button"
+            aria-expanded="false" aria-controls="mainNav">
+      Menu
+    </button>
+
+    <nav id="mainNav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#home" data-view-link="home" class="active">Home</a></li>
+        <li><a href="#events" data-view-link="events">Events</a></li>
+        <li><a href="#shop" data-view-link="shop">Shop</a></li>
+        <li><button type="button" class="nav-button" id="aboutLink">About</button></li>
+      </ul>
+    </nav>
+
+    <button class="donate-button" type="button" data-donate>Donate</button>
+  </header>
+
+  <main id="mainContent">
+    <!-- HOME VIEW -->
+    <article id="homeView" class="view">
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Love remembered. Hope carried forward.</p>
+            <h1>Helping families face leukemia—together.</h1>
+            <p>
+              The Angie Woon Hope Society was created to honour Angie's life by
+              bringing hope, comfort, and practical support to individuals and
+              families facing leukemia.
+            </p>
+            <div class="hero-actions">
+              <button class="primary-button" type="button" data-donate>
+                Make a Donation
+              </button>
+              <button class="secondary-button" type="button" data-show-view="events">
+                See Our Events
+              </button>
+            </div>
+          </div>
+
+          <figure class="hero-portrait">
+            <img
+              src="../images/hero/angie-hero.jpeg"
+              alt="Angie smiling outdoors"
+            >
+            <figcaption>Angie Woon</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="intro section-shell">
+        <div>
+          <p class="eyebrow">Our mission</p>
+          <h2>Turning remembrance into meaningful help</h2>
+        </div>
+        <p>
+          We raise funds for leukemia support programs, patient assistance, family resources,
+          and community initiatives. Every fundraiser is built around a simple belief:
+          no family should have to face a blood-cancer diagnosis alone.
+        </p>
+      </section>
+
+      <section class="impact section-shell" aria-labelledby="impactHeading">
+        <div class="section-heading">
+          <p class="eyebrow">What your support does</p>
+          <h2 id="impactHeading">Small acts. Real impact.</h2>
+        </div>
+        <div class="impact-grid">
+          <article class="impact-card">
+            <span class="impact-icon" aria-hidden="true">♥</span>
+            <h3>Patient support</h3>
+            <p>Helps cover practical needs that can pile up during treatment.</p>
+          </article>
+          <article class="impact-card">
+            <span class="impact-icon" aria-hidden="true">⌂</span>
+            <h3>Family assistance</h3>
+            <p>Supports caregivers and loved ones with resources and relief.</p>
+          </article>
+          <article class="impact-card">
+            <span class="impact-icon" aria-hidden="true">✦</span>
+            <h3>Community hope</h3>
+            <p>Brings people together through compassionate local fundraising.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="featured-event section-shell">
+        <img src="../images/hero/walk-event.svg"
+             alt="Illustration of a community memorial walk">
+        <div>
+          <p class="eyebrow">Featured fundraiser</p>
+          <h2>Walk of Hope</h2>
+          <p>
+            Join friends, families, and neighbours for an uplifting afternoon walk,
+            remembrance ceremony, refreshments, and fundraising in support of leukemia care.
+          </p>
+          <p class="event-meta"><strong>September 12</strong> · Riverside Park · 1:00 PM</p>
+          <button class="primary-button" type="button" data-show-view="events">Event Details</button>
+        </div>
+      </section>
+
+      <section class="tribute">
+        <div class="section-shell tribute-inner">
+          <blockquote>
+            “[insert warm quote from Roger]”
+          </blockquote>
+          <p>— Roger Woon</p>
+        </div>
+      </section>
+    </article>
+
+    <!-- EVENTS VIEW -->
+    <article id="eventsView" class="view hidden" aria-labelledby="eventsTitle">
+      <section class="page-banner events-banner">
+        <div>
+          <p class="eyebrow">Gather. Remember. Give.</p>
+          <h1 id="eventsTitle">Events</h1>
+          <p>Community fundraisers created with warmth, purpose, and a little bit of fun.</p>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Upcoming</p>
+          <h2>Join us at our next event</h2>
+        </div>
+        <div id="eventGrid" class="event-grid"></div>
+      </section>
+
+      <section class="volunteer-callout section-shell">
+        <div>
+          <p class="eyebrow">Pitch in</p>
+          <h2>Volunteer with us</h2>
+          <p>
+            Event-day helpers, bakers, photographers, setup crews, and friendly faces
+            are always welcome.
+          </p>
+        </div>
+        <button class="secondary-button" id="volunteerButton" type="button">Volunteer</button>
+      </section>
+    </article>
+
+    <!-- SHOP VIEW -->
+    <article id="shopView" class="view hidden" aria-labelledby="shopTitle">
+      <section class="page-banner shop-banner">
+        <div>
+          <p class="eyebrow">Wear the message</p>
+          <h1 id="shopTitle">Charity Shop</h1>
+          <p>Proceeds from every item support the charity's programs and events.</p>
+        </div>
+      </section>
+
+      <section class="shop-layout section-shell">
+        <aside class="shop-filters" aria-label="Product filters">
+          <h2>Shop</h2>
+          <label>
+            Category
+            <select id="categoryFilter">
+              <option value="All">All products</option>
+              <option value="Apparel">Apparel</option>
+              <option value="Accessories">Accessories</option>
+              <option value="Keepsakes">Keepsakes</option>
+            </select>
+          </label>
+          <label>
+            Sort
+            <select id="sortProducts">
+              <option value="featured">Featured</option>
+              <option value="name">Name</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+            </select>
+          </label>
+        </aside>
+        <section>
+          <div class="shop-summary">
+            <h2>Fundraising merchandise</h2>
+            <p id="productCount"></p>
+          </div>
+          <div id="productGrid" class="product-grid"></div>
+        </section>
+      </section>
+    </article>
+
+    <!-- SINGLE PRODUCT VIEW -->
+    <article id="productView" class="view hidden" aria-labelledby="productTitle">
+      <nav class="breadcrumb section-shell" aria-label="Breadcrumb">
+        <button type="button" data-show-view="shop">Shop</button>
+        <span aria-hidden="true">›</span>
+        <span id="breadcrumbProduct">Product</span>
+      </nav>
+
+      <section class="product-page section-shell">
+        <div class="product-gallery">
+          <img id="productImage" src="../images/products/shirt.svg" alt="">
+        </div>
+        <div class="product-details">
+          <p class="eyebrow" id="productCategory">Category</p>
+          <h1 id="productTitle">Product title</h1>
+          <p class="product-price" id="productPrice">$0.00</p>
+          <p id="productDescription"></p>
+
+          <fieldset id="sizeGroup">
+            <legend>Choose a size</legend>
+            <div id="productSizes" class="option-row"></div>
+          </fieldset>
+
+          <label class="quantity-label">
+            Quantity
+            <input id="productQuantity" type="number" min="1" max="10" value="1">
+          </label>
+
+          <button class="primary-button wide-button" id="addToCartButton" type="button">
+            Add to Support Cart
+          </button>
+          <p class="purchase-note">This demonstration does not process real payments.</p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner section-shell">
+      <div>
+        <strong>The Angie Woon Hope Society</strong>
+        <p>Honouring one life by supporting many others.</p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p><a href="mailto:angiewoonhopesociety@gmail.com">angiewoonhopesociety@gmail.com</a></p>
+      </div>
+      <div>
+        <strong>Follow the journey</strong>
+        <p>Facebook · Instagram</p>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span> The Angie Woon Hope Society</p>
+  </footer>
+
+  <!-- ABOUT POP-UP -->
+  <dialog id="aboutDialog" class="about-dialog">
+    <button class="dialog-close" type="button" aria-label="Close About window">×</button>
+
+    <section class="about-section">
+      <p class="eyebrow">Who we are</p>
+      <h2>The Angie Woon Hope Society</h2>
+      <p>
+        The Angie Woon Hope Society exists to bring hope, comfort, and meaningful
+        support to everyone receiving care through the Blood and Marrow Transplant
+        Hematology Cancer Clinic at the Arthur J.E. Child Comprehensive Cancer Centre
+        in Calgary, Alberta.
+      </p>
+      <p>
+        Rooted in hope, compassion, and community, we are committed to making a direct
+        impact through advocacy and charitable initiatives. Every dollar raised helps
+        ease the emotional, practical, and financial challenges of treatment and recovery.
+        In honour of Angie, we continue her legacy of kindness and unwavering compassion
+        by bringing hope, comfort, and moments of joy to those who need them most.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <p class="eyebrow">About Angie</p>
+      <h2>A life remembered with love</h2>
+      <p>
+        A loving wife, mother, auntie, niece, friend, sister, and daughter, Angie was
+        a lively and compassionate person who always wanted the best for the people she
+        loved. She encouraged others, offered help wherever she could, and tried to make
+        life a little better for her family and friends. She was witty, determined, and
+        had the best laugh.
+      </p>
+      <p>
+        Angie was diagnosed with Acute Myeloid Leukemia (AML) in March 2023. It came as
+        a shock to all of us, but in that moment her family and friends came together in
+        a way that showed just how deeply Angie was loved. We supported her through every
+        step, doing everything we could to help. With every hospital stay and every update
+        from the doctors, it was a difficult and heartbreaking battle that Angie fought
+        with courage. Surrounded by her family, Angie took her last breaths on
+        November 27, 2023, at the young age of 43.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <p class="eyebrow">Get involved</p>
+      <h2>Help us carry Angie's kindness forward</h2>
+      <p>
+        Founded with a commitment to making a direct impact, the Angie Woon Hope Society
+        ensures that 100% of funds raised directly support individuals and their loved
+        ones by easing the challenges and hardships they face throughout this difficult
+        journey.
+      </p>
+      <p>
+        Join us in bringing hope to others when they need it most. Whether you choose to
+        donate, partner with us, participate in our fundraising events, contribute a gift
+        in kind, or simply help share our mission, you become part of a community making
+        a meaningful difference. Together, we honour Angie's legacy of compassion and
+        kindness, one act of generosity at a time.
+      </p>
+    </section>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+[
+{
+"id": "white-event-2026",
+"title": "The White Event",
+"date": "2026-09-26",
+"displayDate": "September 26, 2026",
+"type": "Bowling",
+"location": "Splitsville - 3919 Richmond Rd SW",
+"time": "To be announced",
+"theme": "white",
+"emoji": "🤍🤍",
+"image": "../images/events/bowling.jpg",
+"imageAlt": "Bowling balls lined up beside a bowling lane",
+"description": "Join us for an evening of bowling, community, and fundraising in support of individuals and families receiving leukemia care.",
+"dressMessage": "Guests are encouraged to wear white and join in the event theme.",
+"registrationOpen": false
+},
+{
+"id": "purple-event-2027",
+"title": "The Purple Event",
+"date": "2027-01-23",
+"displayDate": "January 23, 2027",
+"type": "Bowling",
+"location": "Splitsville - 3919 Richmond Rd SW",
+"time": "To be announced",
+"theme": "purple",
+"emoji": "💜💜",
+"image": "../images/events/bowling.jpg",
+"imageAlt": "Bowling balls lined up beside a bowling lane",
+"description": "Join us for another fun evening of bowling, laughter, and giving back. Funds raised will help bring hope, comfort, and practical support to patients and their loved ones.",
+"dressMessage": "Guests are encouraged to wear purple in honour of Angie and the society's mission.",
+"registrationOpen": false
+}
+]
