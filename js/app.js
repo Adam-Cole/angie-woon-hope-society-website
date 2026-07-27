@@ -2,6 +2,7 @@ const views = {
   home: document.querySelector("#homeView"),
   events: document.querySelector("#eventsView"),
   shop: document.querySelector("#shopView"),
+  prizes: document.querySelector("#prizesView"),
   product: document.querySelector("#productView")
 };
 
