@@ -1000,6 +1000,24 @@ font-size: 0.88rem;
     overflow: hidden;
 }
 
+.video-card {
+    max-width: 900px;
+    margin: 3rem auto;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+
+.video-card video {
+    width: 100%;
+    display: block;
+}
+
+.video-card-body {
+    padding: 1.5rem;
+}
+
 /* =========================
 DIALOGS
 ========================= */
