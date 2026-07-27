@@ -640,7 +640,7 @@ font-weight: 700;
             rgba(40,10,30,.60),
             rgba(40,10,30,.60)
         ),
-        url("../images/events/bowling.jpg");
+        url("./images/events/bowling.jpg");
 
     background-size: cover;
     background-position: center center;

@@ -16,7 +16,7 @@ return;
 }
 
 try {
-const response = await fetch("../data/events.json");
+const response = await fetch("./data/events.json");
 
 if (!response.ok) {
   throw new Error(`Unable to load events: ${response.status}`);
@@ -51,7 +51,7 @@ return;
 }
 
 try {
-const response = await fetch("../data/products.json");
+const response = await fetch("./data/products.json");
 
 if (!response.ok) {
   throw new Error(`Unable to load products: ${response.status}`);
