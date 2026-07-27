@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Roger's memorial charity supporting leukemia patients and their families.">
   <title>The Angie Woon Hope Society</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <script src="../js/app.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#mainContent">Skip to content</a>
 
   <header class="site-header">
     <a class="brand" href="#" id="brandHome" aria-label="The Angie Woon Hope Society home">
-      <img src="../images/brand/image5.jpeg" alt="">
+      <img src="images/brand/image5.jpeg" alt="">
       <span>
         <strong>The Angie Woon Hope Society</strong>
       </span>
@@ -61,7 +61,7 @@
 
           <figure class="hero-portrait">
             <img
-              src="../images/hero/angie-hero.jpeg"
+              src="images/hero/angie-hero.jpeg"
               alt="Angie smiling outdoors"
             >
             <figcaption>Angie Woon</figcaption>
@@ -105,19 +105,29 @@
         </div>
       </section>
 
-      <section class="featured-event section-shell">
-        <img src="../images/hero/walk-event.svg"
-             alt="Illustration of a community memorial walk">
-        <div>
-          <p class="eyebrow">Featured fundraiser</p>
-          <h2>Walk of Hope</h2>
-          <p>
-            Join friends, families, and neighbours for an uplifting afternoon walk,
-            remembrance ceremony, refreshments, and fundraising in support of leukemia care.
-          </p>
-          <p class="event-meta"><strong>September 12</strong> · Riverside Park · 1:00 PM</p>
-          <button class="primary-button" type="button" data-show-view="events">Event Details</button>
-        </div>
+      <section class="featured-event section-shell" id="featuredEvent"> <img id="featuredEventImage" src="../images/events/bowling.jpg" alt="" >
+
+        <div> <p class="eyebrow">Next fundraiser</p>
+
+        <h2 id="featuredEventTitle">
+          Upcoming event
+        </h2>
+
+        <p id="featuredEventDescription">
+          Event details are loading.
+        </p>
+
+        <p class="event-meta" id="featuredEventMeta"></p>
+
+        <button
+          class="primary-button"
+          type="button"
+          data-show-view="events"
+        >
+          Event Details
+        </button>
+
+        </div> 
       </section>
 
       <section class="tribute">

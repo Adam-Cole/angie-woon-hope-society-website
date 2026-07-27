@@ -28,6 +28,7 @@ events.sort((a, b) => {
 });
 
 renderEvents(events);
+renderFeaturedEvent(events);
 
 } catch (error) {
 console.error("Event loading error:", error);
@@ -137,6 +138,57 @@ return `
 </article>
 
 `;
+}
+
+function renderFeaturedEvent(eventList) {
+  const section = document.querySelector("#featuredEvent");
+  const image = document.querySelector("#featuredEventImage");
+  const title = document.querySelector("#featuredEventTitle");
+  const description = document.querySelector("#featuredEventDescription");
+  const meta = document.querySelector("#featuredEventMeta");
+
+  if (!section || !image || !title || !description || !meta) {
+    return;
+  }
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const upcomingEvents = eventList
+    .filter(event => {
+      const eventDate = new Date(`${event.date}T00:00:00`);
+      return eventDate >= today;
+    })
+    .sort((a, b) => {
+      return new Date(a.date) - new Date(b.date);
+    });
+
+  const nextEvent = upcomingEvents[0];
+
+  if (!nextEvent) {
+    section.classList.add("hidden");
+    return;
+  }
+
+  section.classList.remove("hidden");
+
+  image.src = nextEvent.image;
+  image.alt = nextEvent.imageAlt || nextEvent.title;
+
+  title.textContent =
+    `${nextEvent.title}${nextEvent.emoji ? ` ${nextEvent.emoji}` : ""}`;
+
+  description.textContent = nextEvent.description;
+
+  const details = [
+    nextEvent.displayDate,
+    nextEvent.location,
+    nextEvent.time
+  ].filter(detail => {
+    return detail && detail.toLowerCase() !== "to be announced";
+  });
+
+  meta.textContent = details.join(" · ");
 }
 
 let products = [];
