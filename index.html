@@ -6,6 +6,7 @@
   <meta name="description" content="Roger's memorial charity supporting leukemia patients and their families.">
   <title>The Angie Woon Hope Society</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <script src="js/app.js" defer></script>
 </head>
 <body>
@@ -33,8 +34,36 @@
         <li><button type="button" class="nav-button" id="aboutLink">About</button></li>
       </ul>
     </nav>
+    
+    <button class="cart-button" id="cartButton" type="button" aria-label="Open shopping cart">
+      <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+      <span class="cart-count" id="cartCount" aria-label="0 items in cart">0</span>
+    </button>
 
-    <button class="donate-button" type="button" data-donate>Donate</button>
+    <div class="donate-social">
+      <a href="#donate" class="donate-button" data-open-donation>Donate</a>
+
+      <div class="social-links">
+        <a
+          href="https://www.facebook.com/groups/1000967622504806/?ref=share&mibextid=NSMWBT"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/angiewoonhopesociety"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
   </header>
 
   <main id="mainContent">
@@ -51,9 +80,9 @@
               families facing leukemia.
             </p>
             <div class="hero-actions">
-              <button class="primary-button" type="button" data-donate>
-                Make a Donation
-              </button>
+              <a href="#donate" class="primary-button" data-open-donation>
+                  Make a Donation
+              </a>
               <button class="secondary-button" type="button" data-show-view="events">
                 See Our Events
               </button>
@@ -105,6 +134,12 @@
           </article>
         </div>
       </section>
+
+      <section id="donate" class="donate-section section-shell">
+        <p class="eyebrow">Support our mission</p>
+        <h2>Support the Angie Woon Hope Society</h2>
+        <p>Online donations are coming soon.</p>
+    </section>
 
       <section class="featured-event section-shell" id="featuredEvent"> <img id="featuredEventImage" src="images/events/bowling.jpg" alt="" >
 
@@ -161,6 +196,25 @@
 
   <section class="section-shell">
 
+    <!-- Most recent video -->
+    <div class="video-card">
+      <video controls playsinline>
+        <source
+          src="images/Auntie-Cindy-Video.mov"
+          type="video/mp4">
+      </video>
+
+      <div class="video-card-body">
+        <h2>Auntie Cindy</h2>
+
+        <p>
+          Thank you to Auntie Cindy for sharing a story about Angie while helping with the raffle.
+        </p>
+      </div>
+    </div>
+
+    <!-- Previous video -->
+
     <div class="video-card">
 
       <video controls playsinline>
@@ -174,7 +228,7 @@
 
         <p>
           Thank you to Hands On Massage Therapy Clinic for generously
-          supporting this year's raffle.
+          supporting our prize raffle.
         </p>
       </div>
 
@@ -292,6 +346,33 @@
         </div>
       </section>
     </article>
+
+    <!-- CART VIEW -->
+    <article id="cartView" class="view hidden" aria-labelledby="cartTitle">
+      <section class="cart-page section-shell">
+        <div class="cart-page-heading">
+          <div>
+            <p class="eyebrow">Your order</p>
+            <h1 id="cartTitle">Shopping Cart</h1>
+          </div>
+          <button class="secondary-button" type="button" data-show-view="shop">Continue Shopping</button>
+        </div>
+
+        <div class="cart-page-layout">
+          <div id="cartPageItems" class="cart-page-items"></div>
+
+          <aside class="cart-summary" aria-label="Cart summary">
+            <h2>Order Summary</h2>
+            <div class="cart-summary-row">
+              <span>Subtotal</span>
+              <strong id="cartPageSubtotal">$0.00</strong>
+            </div>
+            <p class="purchase-note">Shipping and payment details can be added when the store is ready to accept orders.</p>
+            <button class="primary-button wide-button" id="checkoutButton" type="button">Proceed to Checkout</button>
+          </aside>
+        </div>
+      </section>
+    </article>
   </main>
 
   <footer>
@@ -372,6 +453,68 @@
         kindness, one act of generosity at a time.
       </p>
     </section>
+  </dialog>
+
+  <!-- DONATION POP-DOWN -->
+  <aside class="donation-popdown" id="donationPopdown" aria-label="Make a donation" aria-hidden="true">
+    <div class="donation-popdown-header">
+      <div>
+        <p class="eyebrow">Support our mission</p>
+        <h2>Make a Donation</h2>
+      </div>
+      <button class="donation-popdown-close" id="donationPopdownClose" type="button" aria-label="Close donation options">×</button>
+    </div>
+
+    <p class="donation-popdown-copy">Choose an amount to add to your cart.</p>
+
+    <div class="donation-amounts" id="donationAmounts" aria-label="Suggested donation amounts">
+      <button type="button" class="donation-amount" data-donation-amount="25">$25</button>
+      <button type="button" class="donation-amount" data-donation-amount="50">$50</button>
+      <button type="button" class="donation-amount" data-donation-amount="100">$100</button>
+      <button type="button" class="donation-amount" data-donation-amount="250">$250</button>
+    </div>
+
+    <label class="donation-custom-label" for="customDonationAmount">
+      Other amount
+      <span class="donation-custom-field">
+        <span aria-hidden="true">$</span>
+        <input id="customDonationAmount" type="number" min="1" step="1" inputmode="decimal" placeholder="Enter amount">
+      </span>
+    </label>
+
+    <button class="primary-button wide-button" id="addDonationToCartButton" type="button">
+      Add Donation to Cart
+    </button>
+  </aside>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <div>
+        <p class="eyebrow">Your order</p>
+        <h2>Shopping Cart</h2>
+      </div>
+      <button class="cart-drawer-close" id="cartDrawerClose" type="button" aria-label="Close shopping cart">×</button>
+    </div>
+
+    <div id="cartDrawerItems" class="cart-drawer-items"></div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <strong id="cartDrawerSubtotal">$0.00</strong>
+      </div>
+      <button class="primary-button wide-button" id="viewFullCartButton" type="button">View Full Cart</button>
+    </div>
+  </aside>
+
+  <!-- GENERAL MESSAGE POP-UP -->
+  <dialog id="messageDialog" class="message-dialog">
+    <button class="dialog-close" type="button" aria-label="Close message">×</button>
+    <h2 id="messageTitle">Message</h2>
+    <p id="messageText"></p>
+    <button class="primary-button" id="messageOkay" type="button">Okay</button>
   </dialog>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
