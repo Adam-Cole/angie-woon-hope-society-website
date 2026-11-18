@@ -1,0 +1,26 @@
+{
+  "name": "angie-woon-hope-society",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adam-Cole/angie-woon-hope-society-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Adam-Cole/angie-woon-hope-society-website/issues"
+  },
+  "homepage": "https://github.com/Adam-Cole/angie-woon-hope-society-website#readme",
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "stripe": "^23.1.0"
+  }
+}
